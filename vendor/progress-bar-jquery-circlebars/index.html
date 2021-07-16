@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Progress Bar Countdown Timer Example  </title>
+
+    <meta name="author" content="FrontendScript" />
+    <link rel="stylesheet" href="css/circlebar.css">
+    <!--Only for demo purpose - no need to add.-->
+    <link rel="stylesheet" href="demo.css" />
+
+</head>
+<body>
+		
+<div class="ScriptTop">
+    <div class="rt-container">
+        <div class="col-rt-4" id="float-right">
+             <center>
+                <!-- AD HERE -->
+            </center>
+        </div>
+        <div class="col-rt-2">
+            <ul>
+                <li><a href="https://frontendscript.com/jquery-progress-bar-countdown-timer" title="Back to tutorial page">Back to Tutorial</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<header class="ScriptHeader">
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        	<div class="rt-heading">
+            	<h1> Progress Bar Countdown Timer Example </h1>
+                <p>A circular progress bar with countdown timer using jQuery.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="rt-container">
+          <div class="col-rt-12">
+              <div class="Scriptcontent">
+            
+                 <!-- partial:index.partial.html -->
+<div class="page">
+	<div class="circles-container">
+		<div id="circle-1" data-circle-dialWidth=10 data-circle-skin="yellow">
+			<div class="loader-bg">
+				<div class="text">00:00:00</div>
+			</div>
+		</div>
+		<div class="circle-2" data-circle-maxValue="75" data-circle-counter=1000 data-circle-size="300px">
+			<div class="loader-bg">
+				<div class="text">0%</div>
+			</div>
+		</div>
+		<div class="circlebar" data-circle-startTime=0 data-circle-dialWidth=20 data-circle-size="250px">
+			<div class="loader-bg">
+				<div class="text">00:00:00</div>
+			</div>
+		</div>
+		<div id="circle-3" data-circle-dialWidth=10 data-circle-skin="purple">
+			<div class="loader-bg">
+				<div class="text">00:00:00</div>
+			</div>
+		</div>
+		<div class="circlebar" data-circle-startTime=0 data-circle-maxValue="90" data-circle-dialWidth=10 data-circle-size="100px" data-circle-type="progress">
+			<div class="loader-bg">
+				<div class="text">00:00:00</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- partial -->
+                  
+    		</div>
+		</div>
+    </div>
+</section>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/circlebar.js"></script>
+    <script>
+    $(document).ready(function() {
+	$("#circle-1").Circlebar({
+		maxValue: 30,
+		fontSize: "14px",
+		triggerPercentage: true
+	});
+	var t2 = new Circlebar({
+		element: ".circle-2",
+		maxValue: 152,
+		dialWidth: 40,
+		fontColor: "#777",
+		fontSize: "30px",
+		skin: "fire",
+		type: "progress"
+	});
+
+	new Circlebar({
+		element: "#circle-3",
+		maxValue: 230,
+		size: "240px",
+		fontSize: "30px",
+		type: "progress"
+	});
+	var prefs = {
+		element: ".circlebar"
+	};
+	$('.circlebar').each(function() {
+		prefs.element = $(this);
+		new Circlebar(prefs);
+	});
+});
+    </script>
+    
+    
+    <!-- Analytics -->
+
+	</body>
+</html>

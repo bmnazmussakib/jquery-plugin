@@ -1,0 +1,33 @@
+section{
+    border: 2px solid gray;
+    margin: 30px 0;
+    padding: 30px;
+}
+
+/* Paralax */
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+.slider-for img{
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.slider-nav img{
+    width: 180px;
+}
+
+.center img{
+    width: 80%;
+}
+
+.box{
+    width: 100%;
+}
+
+.curved-text{
+    width: 10%;
+}
